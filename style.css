@@ -1,0 +1,81 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* background: linear-gradient(135deg, #d2dae0, #453057); */
+    background-color: #d2dae0;
+    padding-top: 20px;
+}
+.header {
+    padding-left: 20px;
+    position: absolute;
+    top: 20px;
+}
+.logo {
+    width: 200px;
+}
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    width: 350px;
+}
+h1 {
+    color: black;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+}
+button {
+    padding: 12px 25px;
+    border: none;
+    background-color: #1e3956;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+button:hover {
+    background-color: #1b3a55;
+}
+p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: black;
+}
+a {
+    color: blue;
+    text-decoration: underline;
+}
+
+.flash-message {
+    display: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+}
+.flash-message.success {
+    background-color: #28a745;
+    color: white;
+}
+.flash-message.error {
+    background-color: #dc3545;
+    color: white;
+}
