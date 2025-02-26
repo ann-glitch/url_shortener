@@ -9,7 +9,7 @@ async function shortenUrl() {
     formData.append("long_url", inputUrl.value.trim());
     
     try {
-        const response = await fetch("http://p3tra.co/shorten", {
+        const response = await fetch("https://p3tra.co/shorten", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: formData
