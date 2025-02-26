@@ -25,6 +25,13 @@ async function shortenUrl() {
     }
 }
 
+document.getElementById("input-url").addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault(); 
+        shortenUrl();
+    }
+});
+
 function showFlashMessage(message, type) {
     const flashMessage = document.getElementById("flash-message");
     flashMessage.textContent = message;
