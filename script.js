@@ -4,11 +4,13 @@ async function shortenUrl() {
 
     if (!url) {
         showFlashMessage("Please enter a URL.", "error");
+        document.getElementById("short-url").innerHTML = "";
         return;
     }
 
     if (!isValidUrl(url)) {
         showFlashMessage("The provided URL is invalid. Please enter a valid URL.", "error");
+        document.getElementById("short-url").innerHTML = "";
         return;
 
     }
