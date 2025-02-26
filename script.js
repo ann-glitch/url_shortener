@@ -53,5 +53,5 @@ function showFlashMessage(message, type) {
     
     setTimeout(() => {
         flashMessage.style.display = "none";
-    }, 3000);
+    }, 10000);
 }
