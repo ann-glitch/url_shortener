@@ -4,10 +4,13 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     /* background: linear-gradient(135deg, #d2dae0, #453057); */
     background-color: #d2dae0;
     padding-top: 20px;
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 .header {
     padding-left: 20px;
