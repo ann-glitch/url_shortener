@@ -1,8 +1,16 @@
 async function shortenUrl() {
-    let inputUrl = document.getElementById("input-url");
-    if (!inputUrl.value) {
-        showFlashMessage("Please enter a valid URL", "error");
+    const inputUrl = document.getElementById("input-url");
+    const url = inputUrl.value.trim();
+
+    if (!url) {
+        showFlashMessage("Please enter a URL.", "error");
         return;
+    }
+
+    if (!isValidUrl(url)) {
+        showFlashMessage("The provided URL is invalid. Please enter a valid URL.", "error");
+        return;
+
     }
     
     const formData = new URLSearchParams();
@@ -31,6 +39,11 @@ document.getElementById("input-url").addEventListener("keypress", function (even
         shortenUrl();
     }
 });
+
+function isValidUrl(url) {
+    const pattern = /^(https?:\/\/)?([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(:\d{1,5})?(\/.*)?$/;
+    return pattern.test(url);
+}
 
 function showFlashMessage(message, type) {
     const flashMessage = document.getElementById("flash-message");
