@@ -56,14 +56,10 @@ function copyToClipboard() {
     if (!shortUrl.value) return;
 
     navigator.clipboard.writeText(shortUrl.value).then(() => {
-        copyBtn.querySelector("#copy-icon").textContent = "✅"; 
-        copyBtn.querySelector("#copy-text").textContent = "Copied"; 
-        copyBtn.setAttribute("data-tooltip", "Copied!");
+        copyBtn.querySelector("#copy-text").textContent = "Copied!"; 
 
         setTimeout(() => {
-            copyBtn.querySelector("#copy-icon").textContent = "📋";
             copyBtn.querySelector("#copy-text").textContent = "Copy";
-            copyBtn.setAttribute("data-tooltip", "Copy");
         }, 2000);
     }).catch(() => {
         showFlashMessage("Failed to copy the URL. Please try manually.", "error");
