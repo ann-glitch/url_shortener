@@ -14,7 +14,15 @@
         <h1>URL Shortener</h1>
         <input type="text" id="input-url" placeholder="Enter URL">
         <button onclick="shortenUrl()">Shorten</button>
-        <p id="short-url"></p>
+        <div id="result-container" class="hidden">
+            <div class="input-wrapper">
+                <input type="text" id="short-url" readonly>
+                <button id="copy-btn" onclick="copyToClipboard()" data-tooltip="Copy">
+                    <span id="copy-icon">📋</span> 
+                    <span id="copy-text">Copy</span>
+                </button>
+            </div>
+        </div>
         <div id="flash-message" class="flash-message"></div>
     </div>
 
